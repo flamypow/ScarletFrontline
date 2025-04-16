@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyMoveState : BaseState
+public class PlayerMoveState : BaseState
 {
     private GameStateMachine _stateMachine;
 
-    public EnemyMoveState(GameStateMachine stateMachine)
-    { 
+    public PlayerMoveState(GameStateMachine stateMachine)
+    {
         _stateMachine = stateMachine;
     }
     public override void EnterState()
     {
-        _stateMachine.enemyDemo.TakeTurn();
+        Debug.Log("Player's turn");
+        PlayerController.Instance.PlayerTurnStart();
     }
 
     public override void ExitState()
@@ -23,7 +24,6 @@ public class EnemyMoveState : BaseState
 
     public override void UpdateState()
     {
-        
-    }
 
+    }
 }

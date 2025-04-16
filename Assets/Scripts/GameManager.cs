@@ -1,18 +1,30 @@
 using UnityEngine;
-
+using Code.Scripts.Managers;
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField] private GameStateMachine gameStateMachine;
 
     public bool IsEnemyTurn;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void EnemyTurn()
     {
-        
+        if (IsEnemyTurn)
+        {
+            Debug.Log("enemy may already taken the turn");
+        }
+        else {
+            IsEnemyTurn = true;
+            gameStateMachine.JumpToEnemyState();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayerTurn()
     {
-        
+        if (IsEnemyTurn)
+        {
+            IsEnemyTurn = false;
+            gameStateMachine.JumpToPlayerState();
+        }
     }
+
 }

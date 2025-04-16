@@ -1,0 +1,76 @@
+{
+    "name": "InputForPucks",
+    "maps": [
+        {
+            "name": "PlayerActions",
+            "id": "497829e8-7713-4e5f-9156-6d80054f8502",
+            "actions": [
+                {
+                    "name": "Aim",
+                    "type": "PassThrough",
+                    "id": "59d42577-428a-4933-8341-e2b726c80dbf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChargePower",
+                    "type": "Button",
+                    "id": "56ac4c59-5369-435f-b642-1fad437d2ac5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "0e624a23-c9e8-4722-895a-63b2d00a0d25",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "276e8338-488a-4863-a46f-4e9ce6ffed25",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "68cd12bf-14b5-4615-816a-f63fca151c86",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "69ed610b-2219-49ec-a02c-0be01c28ef96",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChargePower",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
