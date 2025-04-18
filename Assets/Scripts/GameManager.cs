@@ -1,5 +1,6 @@
 using UnityEngine;
 using Code.Scripts.Managers;
+using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameStateMachine gameStateMachine;
@@ -25,6 +26,11 @@ public class GameManager : Singleton<GameManager>
             IsEnemyTurn = false;
             gameStateMachine.JumpToPlayerState();
         }
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Demo");
     }
 
 }
